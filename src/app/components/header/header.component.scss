@@ -1,0 +1,94 @@
+nav{
+  height: 8vh;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-bottom: 1px solid #000;
+}
+.logo{
+  color: #000;
+  flex: 1;
+  margin: 15px 25px;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  z-index: 1000;
+}
+
+ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin: 25px;
+  transition: .3s;
+
+&:hover{
+  padding-bottom: 5px;
+  border-bottom: 2px solid #caa573;
+  transition: .1s;
+}
+}
+
+.mainBackgroundMountains{
+  background-image: url(../../../assets/zakopane-zdjecie-gory.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 2000px;
+  width: 100%;
+}
+h1{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 280px;
+  font-size: 4rem;
+  color: #fff;
+  letter-spacing:6px;
+}
+.h1-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.h2-container{
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.h2-container h2{
+  color: #fff;
+  letter-spacing: 4px;
+  font-size: 1.8rem;
+}
+
+.text-reservation-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text-reservation-container p{
+  font-size: 1.5rem;
+}
+
+
+
+
+button{
+  width: 250px;
+  height: 50px;
+  color: #242424;
+  outline: none;
+  border: none;
+  background-color:#8de781 ;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
