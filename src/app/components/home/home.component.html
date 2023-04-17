@@ -1,1 +1,24 @@
-<p>home works!</p>
+<div class="background">
+
+  <div class="text-container">
+    <p>Zobacz jak wygląda nasza okolica!</p>
+  </div>
+  <div class="photo-container">
+    <div [ngClass]="{'fullscreen': isFullscreen}" (click)="toggleFullscreen()" class="container">
+
+      <img src="../../../assets/housePhoto.jpg" alt="">
+    </div>
+    <div [ngClass]="{'fullscreen2': isFullscreen2}" (click)="toggleFullscreen2() "  class="photo-container">
+
+      <img src="../../../assets/HousePhoto2.jpg" alt="">
+    </div>
+    <div [ngClass]="{'fullscreen3': isFullscreen3}" (click)="toggleFullscreen3() " class="photo-container">
+
+      <img src="../../../assets/HousePhoto3.jpg" alt="">
+    </div>
+    <div  [ngClass]="{'fullscreen4': isFullscreen4}" (click)="toggleFullscreen4() " class="aaa">
+
+      <img src="../../../assets/housePhoto4.jpg"  alt="">
+    </div>
+  </div>
+</div>

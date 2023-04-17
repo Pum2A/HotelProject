@@ -7,4 +7,27 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+
+  isFullscreen = false;
+  isFullscreen2 = false;
+  isFullscreen3 = false;
+  isFullscreen4 = false;
+
+
+
+  toggleFullscreen(){
+  this.isFullscreen   = !this.isFullscreen
+  }
+  toggleFullscreen2(){
+  this.isFullscreen2   = !this.isFullscreen2
+  }
+  toggleFullscreen3(){
+  this.isFullscreen3   = !this.isFullscreen3
+  }
+  toggleFullscreen4(){
+  this.isFullscreen4   = !this.isFullscreen4
+  }
+
+
+
 }

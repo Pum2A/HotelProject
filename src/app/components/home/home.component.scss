@@ -1,0 +1,66 @@
+.background{
+height: 140vh;
+width: 100%;
+background-color: #fff;
+
+
+}
+p{
+  margin: 0;
+  padding: 0;
+
+}
+.photo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 50px;
+
+
+}
+.firstImage, .secondImage, .thirdImage, .fourImage{
+width: 400px;
+height: 400px;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.firstImage{
+  background-image: url(../../../assets/housePhoto.jpg);
+
+}
+
+.fullscreen, .fullscreen2, .fullscreen3, .fullscreen4 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+.text-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  margin: 25px 5px;
+  margin-top: 70px;
+
+}
+
+.photo-container img{
+  width: 300px;
+  height: 400px;
+  margin: 15px;
+  cursor: pointer;
+}
