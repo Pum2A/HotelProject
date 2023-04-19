@@ -1,11 +1,10 @@
 nav{
   height: 8vh;
   width: 100%;
-  background-color: #fff;
+  background-color: #f0ece9;
   display: flex;
   justify-content: end;
   align-items: center;
-  border-bottom: 1px solid #000;
 }
 .logo{
   color: #000;
@@ -14,6 +13,8 @@ nav{
   font-size: 1.8rem;
   letter-spacing: 2px;
   z-index: 1000;
+  font-weight: 700;
+
 
 }
 
@@ -21,12 +22,13 @@ ul li a {
   color: #000;
   text-decoration: none;
   font-size: 1.4rem;
+  font-weight: 300;
   margin: 25px;
   transition: .3s;
 
 &:hover{
   padding-bottom: 5px;
-  border-bottom: 2px solid #caa573;
+  border-bottom: 2px solid #16dfa7;
   transition: .1s;
 }
 }
@@ -76,6 +78,9 @@ h1{
 }
 .text-reservation-container p{
   font-size: 1.5rem;
+  color: #16dfa7;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #000;
 }
 
 
@@ -85,12 +90,10 @@ button{
   width: 250px;
   height: 50px;
   color: #000;
-  font-family: 'Golos Text', sans-serif;
   outline: none;
   border: none;
-  background-color:#d9c16b ;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
+  background-color:#16dfa7 ;
+  font-size: 1.2rem;
+  font-weight: 700;
   cursor: pointer;
 }
