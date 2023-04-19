@@ -1,24 +1,83 @@
 <div class="background">
-
   <div class="text-container">
-    <p>Zobacz jak wygląda nasza okolica!</p>
+    <p>Houses to rent</p>
   </div>
   <div class="photo-container">
-    <div [ngClass]="{'fullscreen': isFullscreen}" (click)="toggleFullscreen()" class="container">
+    <div class="container">
+      <img src="../../../assets/housePhoto.jpg" alt="" />
+      <div class="content-house-container">
+        <p class="content-house-text">
+          Classic old house with modern inside style
+        </p>
+        <p class="content-house-place">Zakopane, centrum</p>
 
-      <img src="../../../assets/housePhoto.jpg" alt="">
+        <p class="content-house-price">
+          Price for night is {{ house1Price }} zł
+        </p>
+        <p class="content-house-rating">
+          Rating is
+          <b>
+            {{ house1Rating }}
+          </b>
+        </p>
+      </div>
     </div>
-    <div [ngClass]="{'fullscreen2': isFullscreen2}" (click)="toggleFullscreen2() "  class="photo-container">
+    <div class="container">
+      <img src="../../../assets/HousePhoto2.jpg" alt="" />
+      <div class="content-house-container">
+        <p class="content-house-text">
+          Classic old house with modern inside style
+        </p>
+        <p class="content-house-place">Zakopane, wybrzeże</p>
 
-      <img src="../../../assets/HousePhoto2.jpg" alt="">
+        <p class="content-house-price">
+          Price for night is {{ house2Price }} zł
+        </p>
+        <p class="content-house-rating">
+          Rating is
+          <b>
+            {{ house2Rating }}
+          </b>
+        </p>
+      </div>
     </div>
-    <div [ngClass]="{'fullscreen3': isFullscreen3}" (click)="toggleFullscreen3() " class="photo-container">
+    <div class="container">
+      <img src="../../../assets/HousePhoto3.jpg" alt="" />
+      <div class="content-house-container">
+        <p class="content-house-text">
+          Classic old house with modern inside style
+        </p>
+        <p class="content-house-place">Zakopane, 5km to centrum</p>
 
-      <img src="../../../assets/HousePhoto3.jpg" alt="">
+        <p class="content-house-price">
+          Price for night is {{ house3Price }} zł
+        </p>
+        <p class="content-house-rating">
+          Rating is
+          <b>
+            {{ house3Rating }}
+          </b>
+        </p>
+      </div>
     </div>
-    <div  [ngClass]="{'fullscreen4': isFullscreen4}" (click)="toggleFullscreen4() " class="aaa">
+    <div class="container">
+      <img src="../../../assets/housePhoto4.jpg" alt="" />
+      <div class="content-house-container">
+        <p class="content-house-text">
+          Classic old house with modern inside style
+        </p>
+        <p class="content-house-place">Zakopane, centrum</p>
+        <p class="content-house-price">
+          Price for night is {{ house4Price }} zł
+        </p>
+        <p class="content-house-rating">
+          Rating is
 
-      <img src="../../../assets/housePhoto4.jpg"  alt="">
+          <b>
+            {{ house4Rating }}
+          </b>
+        </p>
+      </div>
     </div>
   </div>
 </div>

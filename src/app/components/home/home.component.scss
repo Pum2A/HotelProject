@@ -1,5 +1,5 @@
 .background{
-height: 140vh;
+height: 100vh;
 width: 100%;
 background-color: #fff;
 
@@ -30,37 +30,46 @@ background-position: center;
 
 }
 
-.fullscreen, .fullscreen2, .fullscreen3, .fullscreen4 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.fullscreen img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-}
 .text-container{
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-  margin: 25px 5px;
-  margin-top: 70px;
+  margin-top: 15px;
+  padding: 25px 25px;
+  background-color: #d9c16b;
+  // margin-top: 70px;
 
 }
 
+.text-container p{
+  letter-spacing: 5px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+}
 .photo-container img{
   width: 300px;
   height: 400px;
   margin: 15px;
+  gap: 15px;
   cursor: pointer;
 }
+
+.content-house-container{
+  margin: 15px;
+  max-width: 300px;
+}
+
+.content-house-text{
+  text-align: left;
+  font-size: 1.1rem;
+}
+.content-house-place{
+  font-weight: 600;
+}
+.content-house-rating b{
+  color: rgb(167, 26, 80);
+}
+
