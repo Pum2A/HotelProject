@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ImageService } from 'src/app/services/images.service';
+
 
 @Component({
   selector: 'app-home',
@@ -8,11 +10,10 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
 
-  isFullscreen = false;
-  isFullscreen2 = false;
-  isFullscreen3 = false;
-  isFullscreen4 = false;
-
+  public imagePath: string = 'http://localhost:5000/uploads/domZakopane1.jpg';
+  public imagePath2: string = 'http://localhost:5000/uploads/domZakopane2.jpg';
+  public imagePath3: string = 'http://localhost:5000/uploads/domZakopane3.jpg';
+  public imagePath4: string = 'http://localhost:5000/uploads/domZakopane4.jpg';
 
   house1Price = '350';
   house2Price = '450';
@@ -23,21 +24,23 @@ export class HomeComponent {
   house2Rating = '5.30'
   house3Rating = '4.90'
   house4Rating = '5.30'
+  imageData: any;
 
+  constructor(private imageService: ImageService) { }
 
-  toggleFullscreen(){
-  this.isFullscreen   = !this.isFullscreen
+  ngOnInit() {
+    this.imageService.getImage(1).subscribe(
+      (data) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          this.imageData = reader.result;
+        };
+        reader.readAsDataURL(data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
-  toggleFullscreen2(){
-  this.isFullscreen2   = !this.isFullscreen2
-  }
-  toggleFullscreen3(){
-  this.isFullscreen3   = !this.isFullscreen3
-  }
-  toggleFullscreen4(){
-  this.isFullscreen4   = !this.isFullscreen4
-  }
-
-
-
 }
+

@@ -13,6 +13,7 @@ import { ReservationdetailsComponent } from './components/reservationdetails/res
 import { AdminComponent } from './components/admin/admin.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
 
   ],
   providers: [],
