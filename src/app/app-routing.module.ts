@@ -6,6 +6,8 @@ import { RoomdetailsComponent } from './components/roomdetails/roomdetails.compo
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
+import { HouseComponent } from './components/house/house.component';
+import { HouseDetailsComponent } from './components/house-details/house-details.component';
 
 const routes: Routes = [
   {
@@ -23,6 +25,12 @@ const routes: Routes = [
   },
   {
     path:'contact', component:ContactComponent
+  },
+  {
+    path:'house', component:HouseComponent
+  },
+  {
+    path:'house-details/:houseNumber', component: HouseDetailsComponent
   },
 
 

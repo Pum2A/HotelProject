@@ -1,0 +1,5 @@
+<div *ngFor="let house of houses">
+  <h2>{{ house.title }}</h2>
+  <img [src]="house.image" alt="{{ house.title }}">
+  <p>{{ house.description }}</p>
+</div>

@@ -14,6 +14,9 @@ import { AdminComponent } from './components/admin/admin.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HouseComponent } from './components/house/house.component';
+import { HousesService } from './services/house.service';
+import { HouseDetailsComponent } from './components/house-details/house-details.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     AdminComponent,
     ContactComponent,
     FooterComponent,
+    HouseComponent,
+    HouseDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,10 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
 
   ],
-  providers: [],
+  providers: [
+    HousesService,
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,13 +1,36 @@
 import { Component } from '@angular/core';
 import { ImageService } from 'src/app/services/images.service';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
+
+
+
+interface HouseInfo {
+  id: number;
+  name: string;
+  description: string;
+  price: string;
+  image: string;
+}
+
+interface ImageData {
+  imageBase64: string;
+}
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
+
+
+
 export class HomeComponent {
+
+
+
 
 
   public imagePath: string = 'http://localhost:5000/uploads/domZakopane1.jpg';
@@ -24,23 +47,24 @@ export class HomeComponent {
   house2Rating = '5.30'
   house3Rating = '4.90'
   house4Rating = '5.30'
-  imageData: any;
+  imageData!: ImageData;
+  houseInfo!: HouseInfo;
 
-  constructor(private imageService: ImageService) { }
 
-  ngOnInit() {
-    this.imageService.getImage(1).subscribe(
-      (data) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-          this.imageData = reader.result;
-        };
-        reader.readAsDataURL(data);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+
+
+
+
+  constructor(private router: Router) {}
+
+  showHouseDetails(houseNumber: number) {
+    this.router.navigate(['/house-details', houseNumber]);
   }
+
+
+
+
+
+
 }
 
