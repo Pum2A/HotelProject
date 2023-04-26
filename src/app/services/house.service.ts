@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, catchError, tap, throwError } from 'rxjs';
 
 export interface House {
   id: number;
@@ -27,8 +27,15 @@ export class HousesService {
   getHouseById(id: string): Observable<House> {
     return this.http.get<House>(`${this.url}/${id}`);
   }
-
   getHouseInfo(houseNumber: number): Observable<any> {
-    return this.http.get<any>(`${this.url}${houseNumber}`);
+    const url = `${this.url}${houseNumber}`;
+    return this.http.get<any>(url).pipe(
+      tap((response: any) => console.log(`Pobrano informacje dla domku ${houseNumber}: `, response)),
+      catchError(error => {
+        console.log(`Błąd pobierania informacji dla domku ${houseNumber}: `, error);
+        return throwError(error);
+      })
+    );
   }
+
 }
