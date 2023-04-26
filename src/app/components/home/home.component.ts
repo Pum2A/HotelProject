@@ -33,10 +33,10 @@ export class HomeComponent {
 
 
 
-  public imagePath: string = 'http://localhost:5000/uploads/domZakopane1.jpg';
-  public imagePath2: string = 'http://localhost:5000/uploads/domZakopane2.jpg';
-  public imagePath3: string = 'http://localhost:5000/uploads/domZakopane3.jpg';
-  public imagePath4: string = 'http://localhost:5000/uploads/domZakopane4.jpg';
+  public imagePath: string = 'assets/housePhoto1.webp'
+  public imagePath2: string = 'assets/housePhoto2.webp'
+  public imagePath3: string = 'assets/housePhoto3.webp'
+  public imagePath4: string = 'assets/housePhoto4.webp'
 
   house1Price = '350';
   house2Price = '450';

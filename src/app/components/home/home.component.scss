@@ -1,7 +1,7 @@
 .background{
 height: 100vh;
 width: 100%;
-background-color: #fff;
+background-color: #000;
 
 
 }
@@ -27,7 +27,7 @@ background-position: center;
   background-size: cover;
 }
 .firstImage{
-  background-image: url(../../../assets/housePhoto.jpg);
+  background-image: url(../../../assets/housePhoto1.webp);
 
 }
 
@@ -41,13 +41,13 @@ background-position: center;
   margin-bottom: 25px;
   padding: 15px;
 
-  background-color: #e3e3d2;
+  background-color: #050505;
 
 }
 
 .text-container p{
   // font-weight: 00;
-  color: #181818;
+  color: #fff;
   text-transform: uppercase;
 }
 .photo-container img{
@@ -56,15 +56,16 @@ background-position: center;
   margin: 60px 15px 15px 15px;
   object-fit: cover;
   cursor: pointer;
-  border: 1px double #000;
+  border: 1px double #fff;
 }
 
 .content-house-container{
   margin: 15px;
   max-width: 300px;
   height: 10rem;
-  background-color: #e3e3d2;
-  border-bottom: 1px solid #000;
+  background-color: #050505;
+  border-bottom: 1px solid #41e592;
+
 }
 
 .content-house-text{
@@ -74,6 +75,7 @@ background-position: center;
   height: 4.5rem;
   padding: 5px;
   padding-top: 15px;
+  color: #fff;
 
 }
 
@@ -86,7 +88,7 @@ background-position: center;
 .content-house-rating, .content-house-price, .content-house-place {
   font-size: 1rem;
   font-weight: 700;
-  color: #727272;
+  color: #fff;
   margin: 5px;
 }
 
@@ -103,11 +105,15 @@ background-position: center;
   height: 50px;
   width: 300px;
   outline: none;
-  border: 1px solid #e3e3d2;
+  margin: 5px;
+  border: 1px solid #fff;
   background-color: #41e592;
   color: #000;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+  &:hover{
+    background-color: rgb(178, 21, 21);
+  }
 }
 

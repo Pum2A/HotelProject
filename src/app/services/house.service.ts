@@ -30,7 +30,6 @@ export class HousesService {
   getHouseInfo(houseNumber: number): Observable<any> {
     const url = `${this.url}${houseNumber}`;
     return this.http.get<any>(url).pipe(
-      tap((response: any) => console.log(`Pobrano informacje dla domku ${houseNumber}: `, response)),
       catchError(error => {
         console.log(`Błąd pobierania informacji dla domku ${houseNumber}: `, error);
         return throwError(error);

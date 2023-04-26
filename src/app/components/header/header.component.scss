@@ -1,25 +1,43 @@
 nav{
   height: 8vh;
   width: 100%;
-  background-color: #f0ece9;
+  background-color: #000;
   display: flex;
-  justify-content: end;
-  align-items: center;
+
 }
 .logo{
-  color: #000;
-  flex: 1;
+  color: #fff;
   margin: 15px 25px;
   font-size: 1.8rem;
   letter-spacing: 2px;
   z-index: 1000;
   font-weight: 700;
+  cursor: pointer;
 
 
 }
 
+.logo-cont{
+  // flex: 1;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width:400px;
+  // background-color: red;
+  // max-width: 500px;
+  // height: 100%;
+  // width: 200px;
+}
+
+ul{
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+}
+
 ul li a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: 300;
@@ -34,11 +52,11 @@ ul li a {
 }
 
 .mainBackgroundMountains{
-  background-image: url(../../../assets/zakopane-zdjecie-gory.jpg);
+  background-image: url(../../../assets/zakopane-zdjecie-gory.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 70rem;
+  height: 65rem;
   width: 100%;
 }
 h1{
@@ -47,7 +65,7 @@ h1{
   box-sizing: border-box;
   margin-top: 280px;
   font-size: 4rem;
-  color: #fff;
+  color: #000;
   letter-spacing:6px;
 }
 .h1-container{
@@ -65,7 +83,7 @@ h1{
 }
 
 .h2-container h2{
-  color: #fff;
+  color: #000;
   letter-spacing: 4px;
   font-size: 1.8rem;
 }

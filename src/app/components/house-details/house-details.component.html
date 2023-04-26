@@ -1,6 +1,11 @@
-<div *ngIf="houseInfo">
-  <h2>{{ houseInfo.name }}</h2>
-  <p>{{ houseInfo.description }}</p>
-  <p>Cena: {{ houseInfo.price }}</p>
-  <img [src]="'assets/housePhoto' + houseInfo.image_id + '.jpg'" alt="">
+<div *ngIf="houseInfo" class="background-house-container">
+  <div class="content-house-container">
+    <img [src]="'assets/housePhoto' + houseInfo.image_id + '.webp'" alt="">
+    <div class="flex">
+
+      <h2>{{ houseInfo.name }}</h2>
+      <p>{{ houseInfo.description }}</p>
+      <p>Cena: {{ houseInfo.price }}</p>
+    </div>
+  </div>
 </div>
