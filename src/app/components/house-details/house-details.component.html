@@ -1,11 +1,19 @@
 <div *ngIf="houseInfo" class="background-house-container">
   <div class="content-house-container">
-    <img [src]="'assets/housePhoto' + houseInfo.image_id + '.webp'" alt="">
+    <div class="flex2">
+      <img [src]="'assets/housePhoto' + houseInfo.image_id + '.webp'" alt="">
+
+    </div>
     <div class="flex">
 
-      <h2>{{ houseInfo.name }}</h2>
-      <p>{{ houseInfo.description }}</p>
-      <p>Cena: {{ houseInfo.price }}</p>
+      <h2 class="house-name-content">{{ houseInfo.name }}</h2>
+      <p class="place-content">{{ houseInfo.description }}</p>
+      <p class="price-content">Cena: <span>
+
+        {{ houseInfo.price }}
+      </span>
+        zł</p>
+      <p class="about-content">About: {{houseInfo.about}}</p>
     </div>
   </div>
 </div>

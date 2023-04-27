@@ -12,18 +12,32 @@ img{
 }
 .content-house-container{
 
-width: 1000px;
-height: 50vh;
+width: 1300px;
+height: 70vh;
+display: flex;
 // align-items:center;
 color: #fff;
-margin-top: 300px;
+// margin-top: 300px;
+}
+.flex2{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .flex{
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: left;
   flex-direction: column;
+  margin-top: 90px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: right;
+  // flex-direction: column;
 
 }
 h2{
@@ -32,5 +46,25 @@ h2{
 
 p{
   font-size: 2rem;
+
 }
 
+
+
+.about-content{
+  max-width: 600px;
+  text-align: justify;
+  margin: 5px 15px;
+}
+
+.place-content, .price-content{
+  margin: 5px 15px;
+}
+
+.house-name-content{
+  margin: 25px 15px;
+}
+
+.price-content span{
+  color: rgb(255 94 155);
+}
