@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HousesService } from 'src/app/services/house.service';
+import { House } from 'src/app/services/house.service';
 
 @Component({
   selector: 'app-house-details',
@@ -29,6 +30,22 @@ export class HouseDetailsComponent implements OnInit {
       }
     });
   }
+
+
+
+  checkAvailability(): void {
+    this.houseService.getHouseDetails(this.houseNumber).subscribe(
+      (house: House) => {
+        const message = house.occupied ? 'This house is occupied' : 'This house is available';
+        alert(message);
+      },
+      error => {
+        console.error(error);
+        alert('Error occurred while checking availability');
+      }
+    );
+  }
+
 }
 
 

@@ -8,6 +8,8 @@ export interface House {
   description: string;
   price: string;
   image_id: string;
+  occupied: boolean;
+
 }
 
 @Injectable({
@@ -33,6 +35,18 @@ export class HousesService {
       catchError(error => {
         console.log(`Błąd pobierania informacji dla domku ${houseNumber}: `, error);
         return throwError(error);
+      })
+    );
+  }
+
+  getHouseDetails(id: number): Observable<House> {
+    return this.http.get<House>(`${this.url}${id}`).pipe(
+      tap((house: House) => {
+        if (house.occupied) {
+          house.occupied = true;
+        } else {
+          house.occupied = false;
+        }
       })
     );
   }

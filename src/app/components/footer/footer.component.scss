@@ -2,4 +2,28 @@ footer{
 height: 10rem;
 background-color: #050505;
 color: #fff;
+display: flex;
+justify-content: center;
+border-top: 3px solid #fff;
 }
+.text-container{
+  width: 60%;
+  display: flex;
+}
+.text-content-first, .text-content-second, .text-content-third{
+  width: 34%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  color: #41e592;
+  gap:2px;
+
+}
+.text-content-first a, .text-content-second a, .text-content-third a{
+  cursor: pointer;
+}
+
+
+
