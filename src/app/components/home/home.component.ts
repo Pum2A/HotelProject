@@ -1,18 +1,10 @@
 import { Component } from '@angular/core';
-import { ImageService } from 'src/app/services/images.service';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 
 
 
-interface HouseInfo {
-  id: number;
-  name: string;
-  description: string;
-  price: string;
-  image: string;
-}
+
 
 interface ImageData {
   imageBase64: string;
@@ -38,6 +30,7 @@ export class HomeComponent {
   public imagePath3: string = 'assets/housePhoto3.webp'
   public imagePath4: string = 'assets/housePhoto4.webp'
 
+
   house1Price = '350';
   house2Price = '450';
   house3Price = '250';
@@ -47,8 +40,7 @@ export class HomeComponent {
   house2Rating = '5.30'
   house3Rating = '4.90'
   house4Rating = '5.30'
-  imageData!: ImageData;
-  houseInfo!: HouseInfo;
+
 
 
 
@@ -60,6 +52,8 @@ export class HomeComponent {
   showHouseDetails(houseNumber: number) {
     this.router.navigate(['/house-details', houseNumber]);
   }
+
+
 
 
 

@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HouseComponent } from './components/house/house.component';
 import { HousesService } from './services/house.service';
 import { HouseDetailsComponent } from './components/house-details/house-details.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HouseDetailsComponent } from './components/house-details/house-details.
     FooterComponent,
     HouseComponent,
     HouseDetailsComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,

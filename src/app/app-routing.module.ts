@@ -8,6 +8,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { HouseComponent } from './components/house/house.component';
 import { HouseDetailsComponent } from './components/house-details/house-details.component';
+import { FormComponent } from './components/form/form.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,9 @@ const routes: Routes = [
   },
   {
     path:'house-details/:houseNumber', component: HouseDetailsComponent
+  },
+  {
+    path:'form', component: FormComponent
   },
 
 

@@ -16,6 +16,7 @@ export interface House {
   providedIn: 'root'
 })
 export class HousesService {
+  button: any;
   showHouseDetails(houseNumber: number) {
     throw new Error('Method not implemented.');
   }
@@ -50,5 +51,7 @@ export class HousesService {
       })
     );
   }
+
+
 
 }
