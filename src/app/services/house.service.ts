@@ -18,16 +18,16 @@ export interface House {
 export class HousesService {
   constructor(private http: HttpClient) { }
   private url = 'http://localhost:3000/api/house-info/';
-  private urlReservaton = 'http://localhost:3000/api/reservations';
+  private urlSolo = 'http://localhost:3000';
 
-  getHouses(): Observable<House[]> {
-    return this.http.get<House[]>(this.url);
-  }
+  // house by id
 
   getHouseById(id: string): Observable<House> {
     return this.http.get<House>(`${this.url}/${id}`);
   }
 
+
+  // information about house
   getHouseInfo(houseNumber: number): Observable<any> {
     const url = `${this.url}${houseNumber}`;
     return this.http.get<any>(url).pipe(
@@ -38,9 +38,14 @@ export class HousesService {
     );
   }
 
-  createReservation(reservationData: any): Observable<any> {
-    return this.http.post(`${this.urlReservaton}`, reservationData);
+  // creating reservation
+
+  createReservation(houseId: number, reservationData: any): Observable<any> {
+    const url = `${this.urlSolo}/api/reservations/${houseId}`;
+    return this.http.post(url, reservationData);
   }
+
+  // getting details about house
 
   getHouseDetails(id: number): Observable<House> {
     return this.http.get<House>(`${this.url}${id}`).pipe(
@@ -53,6 +58,8 @@ export class HousesService {
       })
     );
   }
+
+
 
 
 

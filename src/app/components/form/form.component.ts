@@ -11,6 +11,10 @@ import { HousesService } from 'src/app/services/house.service';
 export class FormComponent {
   houseReservationForm!: FormGroup;
 
+
+  selectedHouseId!: number;
+
+
   housesList = [
     {id: 1, name: 'First House'},
     {id: 2, name: 'Second House'},
@@ -26,11 +30,8 @@ export class FormComponent {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
-      check_in: ['', Validators.required],
-      check_out: ['', Validators.required],
       guests: ['', Validators.required],
       house_id: ['', Validators.required],
-      created_at: ['', Validators.required],
     });
   }
 
@@ -39,28 +40,26 @@ export class FormComponent {
       return;
     }
 
+    const reservationData = {
+      name: this.houseReservationForm.get('name')?.value,
+      email: this.houseReservationForm.get('email')?.value,
+      phone: this.houseReservationForm.get('phone')?.value,
+      check_in: this.houseReservationForm.get('check_in')?.value,
+      check_out: this.houseReservationForm.get('check_out')?.value,
+      guests: this.houseReservationForm.get('guests')?.value,
+      house_id: this.selectedHouseId, // wybieramy ID domu z pola wyboru
+      created_at: new Date().toISOString(), // dodajemy datę utworzenia
+    };
 
-      const reservationData = {
-        name: this.houseReservationForm.get('name')?.value,
-        email: this.houseReservationForm.get('email')?.value,
-        phone: this.houseReservationForm.get('phone')?.value,
-        check_in: this.houseReservationForm.get('check_in')?.value,
-        check_out: this.houseReservationForm.get('check_out')?.value,
-        guests: this.houseReservationForm.get('guests')?.value,
-        house_id: this.houseReservationForm.get('house_id')?.value,
-        created_at: this.houseReservationForm.get('created_at')?.value,
-      };
-
-
-    this.housesService.createReservation(reservationData).subscribe(
+    this.housesService.createReservation(this.selectedHouseId, reservationData).subscribe(
       (response) => {
         console.log('Reservation successful: ', response);
-
+        this.houseReservationForm.reset();
       },
       (error) => {
         console.log('Reservation failed: ', error);
-
       }
+
     );
   }
 
