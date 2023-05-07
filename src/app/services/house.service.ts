@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, tap, throwError } from 'rxjs';
+import { Reservation } from '../models/reservation/reservation.module';
 
 export interface House {
   id: number;
@@ -9,19 +10,15 @@ export interface House {
   price: string;
   image_id: string;
   occupied: boolean;
-
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class HousesService {
-  button: any;
-  showHouseDetails(houseNumber: number) {
-    throw new Error('Method not implemented.');
-  }
   constructor(private http: HttpClient) { }
-  private url = 'http://localhost:5000/api/house-info/';
+  private url = 'http://localhost:3000/api/house-info/';
+  private urlReservaton = 'http://localhost:3000/api/reservations';
 
   getHouses(): Observable<House[]> {
     return this.http.get<House[]>(this.url);
@@ -30,6 +27,7 @@ export class HousesService {
   getHouseById(id: string): Observable<House> {
     return this.http.get<House>(`${this.url}/${id}`);
   }
+
   getHouseInfo(houseNumber: number): Observable<any> {
     const url = `${this.url}${houseNumber}`;
     return this.http.get<any>(url).pipe(
@@ -38,6 +36,10 @@ export class HousesService {
         return throwError(error);
       })
     );
+  }
+
+  createReservation(reservationData: any): Observable<any> {
+    return this.http.post(`${this.urlReservaton}`, reservationData);
   }
 
   getHouseDetails(id: number): Observable<House> {

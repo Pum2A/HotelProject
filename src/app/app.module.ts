@@ -18,6 +18,7 @@ import { HouseComponent } from './components/house/house.component';
 import { HousesService } from './services/house.service';
 import { HouseDetailsComponent } from './components/house-details/house-details.component';
 import { FormComponent } from './components/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { FormComponent } from './components/form/form.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
 
   ],
   providers: [

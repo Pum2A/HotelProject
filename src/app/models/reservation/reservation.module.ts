@@ -3,14 +3,12 @@ import { CommonModule } from '@angular/common';
 
 
 export interface Reservation {
-  name: string;
+  houseId: number;
+  firstName: string;
+  lastName: string;
   email: string;
-  phone: string;
-  checkIn: Date;
-  checkOut: Date;
-  adults: number;
-  children: number;
-  message: string;
+  phoneNumber: number;
+  date: Date;
 }
 
 

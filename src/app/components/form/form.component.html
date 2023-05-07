@@ -1,20 +1,26 @@
 <div class="background-house-container">
   <div class="content-house-container">
-    <form action="">
-      <label for="">Choose your house</label>
-      <input type="text">
-      <label for="">First name</label>
-      <input type="text">
-      <label for="">Second name</label>
-      <input type="text">
-      <label for="">E-mail</label>
-      <input type="text">
-      <label for="">Phone Number</label>
-      <input type="text">
-      <label for="">Date</label>
-      <input type="text">
-
-
+    <form [formGroup]="houseReservationForm" (ngSubmit)="onSubmit()">
+      <label for="house">Choose your house:</label>
+      <select formControlName="house_id" id="house">
+        <option value="1">First House</option>
+        <option value="2">Second House</option>
+        <option value="3">Third House</option>
+        <option value="4">Fourth House</option>
+      </select>
+      <label for="firstName">First <span>name</span></label>
+      <input type="text" formControlName="name" id="firstName">
+      <label for="email">E-mail</label>
+      <input type="text" formControlName="email" id="email">
+      <label for="phoneNumber">Phone Number</label>
+      <input type="tel" formControlName="phone" id="phoneNumber" maxlength="9">
+      <label for="checkIn">Check-in date</label>
+      <input type="date" formControlName="check_in" id="checkIn">
+      <label for="checkOut">Check-out date</label>
+      <input type="date" formControlName="check_out" id="checkOut">
+      <label for="guests">Number of guests</label>
+      <input type="number" formControlName="guests" id="guests">
+      <input type="submit" value="Send" class="btn-submit">
     </form>
   </div>
 </div>
