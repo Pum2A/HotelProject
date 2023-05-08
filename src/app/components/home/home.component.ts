@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { houseModel } from 'src/app/models/house-model';
+import { HouseDetailsService } from 'src/app/services/house-details.service';
 
 
 
@@ -21,6 +22,8 @@ interface ImageData {
 
 export class HomeComponent {
 
+  houses: houseModel[] = [];
+
 
 
 
@@ -31,15 +34,6 @@ export class HomeComponent {
   public imagePath4: string = 'assets/housePhoto4.webp'
 
 
-  house1Price = '350';
-  house2Price = '450';
-  house3Price = '250';
-  house4Price = '150';
-
-  house1Rating = '4.30'
-  house2Rating = '5.30'
-  house3Rating = '4.90'
-  house4Rating = '5.30'
 
 
 
@@ -47,14 +41,20 @@ export class HomeComponent {
 
 
 
-  constructor(private router: Router) {}
+
+  constructor(private router: Router, private houseDetails: HouseDetailsService) {}
 
   showHouseDetails(houseNumber: number) {
-    this.router.navigate(['/house-details', houseNumber]);
+    this.router.navigate(['/house-details', houseNumber + 1]);
   }
 
+  ngOnInit(): void {
+    this.loadHouses();
+  }
 
-
+loadHouses(): void {
+this.houseDetails.getHouses().subscribe(contactsServer => this.houses = contactsServer)
+}
 
 
 

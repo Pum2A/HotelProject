@@ -48,7 +48,6 @@ export class FormComponent {
       check_out: this.houseReservationForm.get('check_out')?.value,
       guests: this.houseReservationForm.get('guests')?.value,
       house_id: this.selectedHouseId, // wybieramy ID domu z pola wyboru
-      created_at: new Date().toISOString(), // dodajemy datę utworzenia
     };
 
     this.housesService.createReservation(this.selectedHouseId, reservationData).subscribe(

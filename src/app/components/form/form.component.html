@@ -2,8 +2,8 @@
   <div class="content-house-container">
     <form [formGroup]="houseReservationForm" (ngSubmit)="onSubmit()">
       <label for="house">Choose your house:</label>
-      <select formControlName="house_id" [(ngModel)]="selectedHouseId">
-        <option *ngFor="let house of housesList" [value]="house.id">{{house.name}}</option>
+      <select [(ngModel)]="selectedHouseId" name="house_id" class="form-control" formControlName="house_id">
+        <option *ngFor="let house of housesList" [value]="house.id">{{ house.name }}</option>
       </select>
       <label for="firstName">First <span>name</span></label>
       <input type="text" formControlName="name" id="firstName">
