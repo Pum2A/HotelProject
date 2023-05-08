@@ -1,5 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
+@import "mixsin.scss";
+:root{
+  --color-primary-blue: #2997ff;
+  --color-primary-gray: rgb(22, 22, 23);
+  --color-primary-black: #000;
+  --color-primary-white: #fff;
+}
+
+html{
+  font-size: 10px;
+}
+
+
 ul, li,h2,p{
   text-decoration: none;
   list-style-type: none;
@@ -17,5 +30,4 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
-
 
