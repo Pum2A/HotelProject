@@ -1,16 +1,16 @@
 <div class="background">
   <div class="text-container">
-    <p>Houses to rent</p>
+    <p>OUR CURRENT HOUSES</p>
   </div>
   <div class="photo-container">
     <div class="content-house-container" *ngFor="let house of houses; let i = index" >
       <img src="{{house.image_url}}" alt="">
       <div class="content-house-text">
 
-        <p>House name:{{house.name}}</p>
-        <p>House about:{{house.description}}</p>
-        <p>House price:{{house.price}}</p>
-        <p>House rating:{{house.rating}}</p>
+        <p>House name: {{house.name}}.</p>
+        <p>House about: {{house.description}}.</p>
+        <p>House price: {{house.price}}zł.</p>
+        <p>House rating: {{house.rating}}.</p>
       </div>
 
 

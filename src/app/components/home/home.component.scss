@@ -1,7 +1,8 @@
 .background{
 height: 100vh;
 width: 100%;
-background-color: #fff;
+background-color: #000;
+max-width: 100%;
 
 
 }
@@ -15,7 +16,6 @@ background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  // margin-top: 50px;
 
 
 }
@@ -31,9 +31,13 @@ background-color: #fff;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-  height: 8rem;
-  margin-bottom: 25px;
-  padding: 15px;
+  height: 12rem;
+  padding: 2.5rem 2.5rem;
+  width: 100%;
+  background-color: var(--color-primary-gray);
+  border-top: 1px solid var(--color-primary-blue);
+  border-bottom: 1px solid var(--color-primary-blue);
+
 
 
 
@@ -41,9 +45,9 @@ background-color: #fff;
 
 .text-container p{
   font-weight: 700;
-  font-size: 4rem;
-  color: #000;
-  text-transform: uppercase;
+  font-size: 5rem;
+
+  color: var(--color-primary-white);
 }
 .photo-container img{
   width: 400px;
@@ -53,12 +57,12 @@ background-color: #fff;
   margin: 60px 15px 15px 15px;
   object-fit: cover;
   cursor: pointer;
-  border: 3px solid #000;
+  border: 1rem solid #fff;
 }
 
 
 .content-house-text {
-  margin: 15px;
+  // margin: 15px;
   max-width: 400px;
   height: 10rem;
   background-color: #050505;
@@ -68,11 +72,12 @@ background-color: #fff;
 .content-house-text{
   text-align: start;
   font-size: 1.3rem;
-  font-weight: 700;
-  height: 11rem;
-  padding: 25px;
+  // font-weight: 700;
+  height: 13rem;
+  padding: 15px;
   padding-top: 1.5rem;
   color: #fff;
+  background-color: var(--color-primary-gray);
 
 }
 
@@ -100,7 +105,7 @@ background-color: #fff;
 
 
 .button-reserve-container{
-  margin: 15px;
+  margin-top: 15px;
   max-width: 400px;
   display: flex;
   justify-content: center;
@@ -108,18 +113,41 @@ background-color: #fff;
 }
 
 .button-reserve-container button{
-  height: 50px;
-  width: 300px;
+  height: 5.5rem;
+  width: 30rem;
   outline: none;
   margin: 5px;
-  border: 1px solid #fff;
-  background-color: var(--color-primary-blue);
+  background-color: var(--color-primary-white);
   color: #000;
-  font-size: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
   font-weight: 700;
+  border: 1px solid var(--color-primary-blue);
   cursor: pointer;
   &:hover{
-    background-color: rgb(255 94 155);
+    background-color:var(--color-primary-darkBlue);
+    transition: 0.3s;
+    border: 1px solid #fff;
+
   }
 }
 
+
+@media only screen and (max-width: 700px){
+  .photo-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .text-container p{
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+
+  }
+
+  .background{
+    min-height: 500vh;
+    max-height: 1000vh;
+  }
+}
