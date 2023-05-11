@@ -41,6 +41,26 @@ ul{
   align-items: center;
 }
 
+i{
+  color: #fff;
+  font-size: 6rem;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover{
+    color: var(--color-primary-blue);
+    transition: 0.3s;
+  }
+}
+
+.icons-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+
+  gap:10rem;
+}
+
 ul li a {
   color: #fff;
   text-decoration: none;
@@ -78,7 +98,7 @@ h1{
   font-size: 4rem;
   color: #fff;
   letter-spacing:.6rem;
-  margin-top: 12rem;
+  margin-top: 5rem;
 }
 .h1-container{
   display: flex;
