@@ -71,7 +71,7 @@ p{
 }
 
 .price-content span{
-  color: rgb(255 94 155);
+  color: var(--color-primary-blue)
 }
 
 
@@ -91,10 +91,11 @@ p{
   border: 1px solid #fff;
   background-color: var(--color-primary-blue);;
   color: #000;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 700;
   cursor: pointer;
   &:hover{
     background-color: rgb(255 94 155);
   }
 }
+

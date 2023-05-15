@@ -1,5 +1,5 @@
 .background{
-height: 100vh;
+height: 180vh;
 width: 100%;
 background-color: #000;
 max-width: 100%;
@@ -16,6 +16,8 @@ max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 75px;
 
 
 }
@@ -35,7 +37,7 @@ max-width: 100%;
   padding: 2.5rem 2.5rem;
   width: 100%;
   background-color: var(--color-primary-gray);
-  border-top: 1px solid var(--color-primary-blue);
+  // border-top: 1px solid var(--color-primary-blue);
   border-bottom: 1px solid var(--color-primary-blue);
 
 
@@ -93,7 +95,7 @@ max-width: 100%;
 
 
 .content-house-rating b{
-  color: rgb(255 94 155);
+  // color: rgb(255 94 155);
 
 }
 .content-house-rating, .content-house-price, .content-house-place {
