@@ -90,7 +90,7 @@ ul li span a{
 }
 
 .mainBackgroundMountains{
-  background-color: #000;
+  background-color: var(--color-primary-black);
   height: 45rem;
   width: 100%;
   display: flex;
@@ -100,28 +100,19 @@ h1{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // margin-top: 2.8rem;
   font-size: 4rem;
   color: #fff;
   letter-spacing:.6rem;
-  margin-top: 10rem;
 }
 .h1-container{
   display: flex;
   justify-content: left;
   align-items: center;
   padding: 1rem 3rem;
-  // height: 10rem;
 
 
 }
-.h2-container{
-  display: flex;
-  justify-content: left;
-  margin: 1rem 3rem;
 
-
-}
 
 .h2-container h2{
   color: #fff;
@@ -142,7 +133,7 @@ h1{
   font-size: 1.5rem;
   color: #2997ff;
   font-weight: 700;
-  text-shadow: .1rem .1rem .1rem #000;
+  text-shadow: .1rem .1rem .1rem var(--color-primary-black);
   margin: 3.5rem 3.5rem
 }
 
@@ -180,21 +171,14 @@ h2 span{
   color:#2997ff  ;
 }
 .icons-text-container{
-  margin-top: 10rem;
-  // height: 10rem;
+
   padding: 1rem 3rem;
 }
 
 .icons-text-container p{
-  display: flex;
-  justify-content: right;
-  align-items: center;
   color: #fff;
-  margin: 1rem 1rem;
   font-size: 4rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 5px;
 }
 .icons-text-container p span{
   color: var(--color-primary-blue);
@@ -205,12 +189,21 @@ h2 span{
 .left-site-cont{
   width: 33%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 
 }
 
 .right-site-cont{
   width: 33%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .center-site-cont{
   width: 33%;

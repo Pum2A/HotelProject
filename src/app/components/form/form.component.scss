@@ -1,5 +1,5 @@
 .background-house-container{
-  background-color: #000;
+  background-color: var(--color-primary-black);
   width: 100%;
   height: 80vh;
   display:flex;
@@ -34,5 +34,8 @@ input, select{
 .btn-submit{
   cursor: pointer;
   background-color: #41e592;
-  color: #000;
+  color: var(--color-primary-black);
+}
+.formSuccess{
+  display: none;
 }

@@ -4,7 +4,7 @@ img{
 }
 
 .background-house-container{
-  background-color: #000;
+  background-color: var(--color-primary-black);
   width: 100%;
   height: 80vh;
   display:flex;
@@ -39,10 +39,6 @@ color: #fff;
   align-items: left;
   flex-direction: column;
   margin-top: 90px;
-  // display: flex;
-  // justify-content: center;
-  // align-items: right;
-  // flex-direction: column;
 
 }
 h2{
@@ -90,12 +86,15 @@ p{
   margin: 5px;
   border: 1px solid #fff;
   background-color: var(--color-primary-blue);;
-  color: #000;
-  font-size: 2rem;
+  color: var(--color-primary-black);
+  font-size: 1.3rem;
   font-weight: 700;
   cursor: pointer;
+  transition: 0.3s ease-in;
+
   &:hover{
-    background-color: rgb(255 94 155);
+    background-color: rgb(49, 49, 158);
+    transition: 0.3s ease-out;
   }
 }
 

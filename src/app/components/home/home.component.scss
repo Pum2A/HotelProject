@@ -1,7 +1,7 @@
 .background{
 height: 180vh;
 width: 100%;
-background-color: #000;
+background-color: var(--color-primary-black);
 max-width: 100%;
 
 
@@ -46,7 +46,8 @@ max-width: 100%;
 }
 
 .text-container p{
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 1px;
   font-size: 5rem;
 
   color: var(--color-primary-white);
@@ -120,7 +121,7 @@ max-width: 100%;
   outline: none;
   margin: 5px;
   background-color: var(--color-primary-white);
-  color: #000;
+  color: var(--color-primary-black);
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 700;

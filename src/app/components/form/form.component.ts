@@ -13,6 +13,7 @@ export class FormComponent {
 
 
   selectedHouseId!: number;
+  successfulText: boolean = true;
 
 
   housesList = [
@@ -54,6 +55,9 @@ export class FormComponent {
       (response) => {
         console.log('Reservation successful: ', response);
         this.houseReservationForm.reset();
+        // successfullText(){
+        //   this.successfulText = !this.successfulText;
+        // }
       },
       (error) => {
         console.log('Reservation failed: ', error);
@@ -61,6 +65,7 @@ export class FormComponent {
 
     );
   }
+
 
 
 }
