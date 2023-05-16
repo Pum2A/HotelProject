@@ -4,8 +4,9 @@ background-color: #050505;
 color: #fff;
 display: flex;
 justify-content: center;
-border-top: 3px solid #fff;
+border-top: 1px solid var(--color-primary-blue);
 max-width: 100%;
+z-index: 1000;
 }
 .text-container{
   width: 60%;

@@ -17,10 +17,14 @@ export class FormComponent {
 
 
   housesList = [
-    {id: 1, name: 'First House'},
-    {id: 2, name: 'Second House'},
-    {id: 3, name: 'Third House'},
-    {id: 4, name: 'Fourth House'}
+    {id: 1, name: 'House nr 1'},
+    {id: 2, name: 'House nr 2'},
+    {id: 3, name: 'House nr 3'},
+    {id: 4, name: 'House nr 4'},
+    {id: 5, name: 'House nr 5'},
+    {id: 6, name: 'House nr 6'},
+    {id: 7, name: 'House nr 7'},
+    {id: 8, name: 'House nr 8'},
   ];
 
 

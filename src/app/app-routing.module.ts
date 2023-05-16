@@ -14,7 +14,6 @@ const routes: Routes = [
   {
     path:'', component:HomeComponent,
   },
-
   {
     path:'roomlist', component:RoomlistComponent
   },
