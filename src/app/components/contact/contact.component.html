@@ -1,18 +1,14 @@
 <div class="background-house-container">
   <div class="content-house-container">
     <form [formGroup]="houseReservationForm" (ngSubmit)="onSubmit()">
-      <label for="house">Choose your house:</label>
-      <select [(ngModel)]="selectedHouseId" name="house_id" class="form-control" formControlName="house_id">
-        <option *ngFor="let house of housesList" [value]="house.id">{{ house.name }}</option>
-      </select>
       <label for="firstName">First <span>name</span></label>
       <input type="text" formControlName="name" id="firstName">
       <label for="email">E-mail</label>
       <input type="text" formControlName="email" id="email">
       <label for="phoneNumber">Phone Number</label>
       <input type="tel" formControlName="phone" id="phoneNumber" maxlength="9">
-      <label for="guests">Number of guests</label>
-      <input type="number" formControlName="guests" id="guests">
+      <label for="about">About</label>
+      <input type="text" formControlName="about" id="about">
       <div class="submit-cont">
         <input type="submit" value="Send" class="btn-submit">
       </div>
