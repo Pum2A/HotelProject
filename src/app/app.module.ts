@@ -7,9 +7,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { RoomlistComponent } from './components/roomlist/roomlist.component';
 import { RoomdetailsComponent } from './components/roomdetails/roomdetails.component';
-import { ReservationComponent } from './components/reservation/reservation.component';
-import { ReservationlistComponent } from './components/reservationlist/reservationlist.component';
-import { ReservationdetailsComponent } from './components/reservationdetails/reservationdetails.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -19,6 +16,9 @@ import { HousesService } from './services/house.service';
 import { HouseDetailsComponent } from './components/house-details/house-details.component';
 import { FormComponent } from './components/form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { AvaibleRoomsComponent } from './components/avaible-rooms/avaible-rooms.component';
+
 
 @NgModule({
   declarations: [
@@ -27,21 +27,20 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     RoomlistComponent,
     RoomdetailsComponent,
-    ReservationComponent,
-    ReservationlistComponent,
-    ReservationdetailsComponent,
     AdminComponent,
     ContactComponent,
     FooterComponent,
     HouseComponent,
     HouseDetailsComponent,
     FormComponent,
+    AvaibleRoomsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    LazyLoadImageModule,
 
   ],
   providers: [

@@ -4,22 +4,19 @@
       class="content-house-container"
       *ngFor="let house of houses; let i = index"
     >
+    <div *ngIf="house.occupied == 0">
       <img src="{{ house.image_url }}" alt="" />
       <div class="content-house-text">
         <p>House name: {{ house.name }}.</p>
         <p>House about: {{ house.description }}.</p>
         <p>House price: {{ house.price }} $ / per day.</p>
         <p>House rating: {{ house.rating }}.</p>
-        <div *ngIf="house.occupied; else elseBlock">
-          <p class="notAvaible">NOT AVAIBLE</p>
-        </div>
-        <ng-template #elseBlock>
           <p class="avaible">AVAIBLE</p>
-        </ng-template>
-      </div>
+        </div>
 
-      <div class="button-reserve-container">
-        <button (click)="showHouseDetails(i + 0)">Check this house</button>
+        <div class="button-reserve-container">
+          <button (click)="showHouseDetails(i + 0)">Check this house</button>
+        </div>
       </div>
     </div>
   </div>

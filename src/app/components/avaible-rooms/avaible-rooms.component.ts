@@ -5,14 +5,13 @@ import { HouseDetailsService } from 'src/app/services/house-details.service';
 
 
 @Component({
-  selector: 'app-roomlist',
-  templateUrl: './roomlist.component.html',
-  styleUrls: ['./roomlist.component.scss']
+  selector: 'app-avaible-rooms',
+  templateUrl: './avaible-rooms.component.html',
+  styleUrls: ['./avaible-rooms.component.scss']
 })
-export class RoomlistComponent {
+export class AvaibleRoomsComponent {
   houses: houseModel[] = [];
 
-  test!:number ;
 
 
 

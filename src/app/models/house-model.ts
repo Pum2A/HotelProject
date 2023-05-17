@@ -4,5 +4,7 @@ export interface houseModel {
   description: string;
   price: number;
   about: string;
+  occupied:number;
   rating: number;
+
 }
